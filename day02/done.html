@@ -1,0 +1,25 @@
+<button id="toggle">Включить</button>
+    <br />
+    <img id="bulb" src="./bulb1.png" />;
+    <style>
+      #toggle {
+        background: black;
+        color: white;
+      }
+      #bulb {
+        width: 250px;
+      }
+    </style>
+    <script>
+      const bulbToggle = document.getElementById("toggle");
+      bulbToggle.addEventListener("click", () => {
+        const bulb = document.getElementById("bulb");
+        if (bulbToggle.innerText == "Выключить") {
+          bulbToggle.innerText = "Включить";
+          bulb.src = "./bulb1.png";
+        } else {
+          bulbToggle.innerText = "Выключить";
+          bulb.src = "./bulb.png";
+        }
+      });
+    </script>
